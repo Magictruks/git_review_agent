@@ -20,6 +20,7 @@ PR_NUMBER = int(os.getenv("PR_NUMBER"))
 
 client = genai.Client(api_key=GEMINI_API_KEY)
 gh = Github(GITHUB_TOKEN)
+model = "gemini-2.5-flash"
 
 def get_review_from_gemini(diff_content):
     criteria_text = "\n".join([f"- {c}" for c in CONFIG['criteria']])
@@ -38,7 +39,7 @@ def get_review_from_gemini(diff_content):
     {diff_content}
     """
 
-    response = client.models.generate_content(model="gemini-1.5-flash", contents=prompt)
+    response = client.models.generate_content(model=model, contents=prompt)
     return response.text
 
 def calculate_stats(review_text):
