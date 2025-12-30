@@ -8,7 +8,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     permissions:
-      pull-requests: write # Important pour poster le commentaire
+      pull-requests: write
       contents: read
 
     steps:
