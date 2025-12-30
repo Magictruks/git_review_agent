@@ -6,7 +6,7 @@
 ![Python Version](https://img.shields.io/badge/python-3.12%2B-blue?logo=python&logoColor=white)
 ![Model](https://img.shields.io/badge/Model-Gemini%202.5%20Flash-orange?logo=google-gemini&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
 An automated code review agent powered by **Google Gemini 2.5 Flash** and **GitHub Actions**. This agent analyzes Pull Requests based on custom criteria, provides scores, and automatically approves or requests changes based on your quality thresholds.
 
