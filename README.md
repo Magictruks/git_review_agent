@@ -10,7 +10,7 @@ An automated code review agent powered by **Google Gemini 1.5 Flash** and **GitH
     - ✅ **Approve**: If the overall score is ≥ 90%.
     - ❌ **Request Changes**: If the overall score is < 50%.
     - 💬 **Comment**: For everything in between.
-- **Context-Aware**: Uses Gemini 1.5 Flash's large context window to handle large diffs efficiently.
+- **Context-Aware**: Uses Gemini 2.5 Flash's large context window to handle large diffs efficiently.
 - **Cost Effective**: Optimized to only scan relevant code changes and ignore noise (lockfiles, assets).
 
 ## 🛠️ Architecture
