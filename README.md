@@ -92,7 +92,9 @@ CONFIG = {
 >
 > **Overall Score: 18/20 (90.0%)**
 > *Great job! The code meets our high standards.*
-> **Best Practices [Score: 5/5]**
+>
+> 
+>**Best Practices [Score: 5/5]**
 > * Excellent modularization of the auth service.
 >
 >
