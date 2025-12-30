@@ -41,38 +41,16 @@ By default, GitHub prevents Actions from approving Pull Requests. You must enabl
 
 Without this step, the script will fail with a `422 Unprocessable Entity` error when trying to approve a PR.
 ### 4. Add the Workflow
-Create `.github/workflows/ai-review.yml` in your repo:
+To integrate the AI reviewer into your repository, you need to add the workflow file. You can find the complete configuration and use it as a template here:
 
-```yaml
-name: AI Code Reviewer
-on:
-  pull_request:
-    types: [opened, synchronize]
+👉 **[.github/workflows/ai-review.yml](.github/workflows/ai-review.yml)**
 
-jobs:
-  review:
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-      contents: read
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Get Diff
-        run: git diff origin/${{ github.base_ref }}...origin/${{ github.head_ref }} -- . ':!*-lock.json' > diff.txt
-      - name: Run Review
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-        run: |
-          pip install PyGithub google-genai
-          python scripts/ai_reviewer.py diff.txt
+This workflow is pre-configured to:
+- Trigger on Pull Request events.
+- Extract and filter the code diff.
+- Execute the Python analysis script with the necessary permissions.
 
-```
-
-### 4. Customizing Criteria
+### 5. Customizing Criteria
 
 You can easily adjust the scoring logic and thresholds in `scripts/ai_reviewer.py`:
 
