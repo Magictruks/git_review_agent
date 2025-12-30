@@ -1,6 +1,6 @@
 # 🤖 Gemini AI Code Reviewer
 
-An automated code review agent powered by **Google Gemini 1.5 Flash** and **GitHub Actions**. This agent analyzes Pull Requests based on custom criteria, provides scores, and automatically approves or requests changes based on your quality thresholds.
+An automated code review agent powered by **Google Gemini 2.5 Flash** and **GitHub Actions**. This agent analyzes Pull Requests based on custom criteria, provides scores, and automatically approves or requests changes based on your quality thresholds.
 
 ## 🚀 Features
 
